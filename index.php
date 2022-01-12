@@ -71,7 +71,7 @@
        
         <!-- PHP code taht will store the list of methods available in the database on a dropdown div-->
          <?php
-            648019f5
+            
             $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
             //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
                         
