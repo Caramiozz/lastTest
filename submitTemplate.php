@@ -12,6 +12,7 @@
          <!-- include the CSS file and javascript file -->
         <link rel="stylesheet" href="submitTemplateCSS.css">
         <script type="text/javascript" src="javascriptfile.js"></script>
+        <title>Template Submission</title>
         
         
     </head>
