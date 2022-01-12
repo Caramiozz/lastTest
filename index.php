@@ -69,7 +69,39 @@
     <!--The main div of our index page, this will contain the functionality -->
     <div id="mainDiv">
        
-       
+        <!-- PHP code taht will store the list of methods available in the database on a dropdown div-->
+         <?php
+            648019f5
+            $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
+            //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
+                        
+            // query the methods table for every entry                
+            $sql="SELECT * FROM methods";                       
+            $result = mysqli_query($conn , $sql);            
+            
+            // echo relevant fields for the methods list
+            echo "<div id=\"listOfMethodsDiv\">";
+            
+              echo"<button name=\"showListButtonPost\" id=\"showListButton\" onclick =\"showMethodsList()\"> List of Methods </button>";
+                
+              echo"<div id=\"listContainerDiv\" style=\"display: none\">"; 
+              echo"<input type=\"image\" src=\"https://i.ibb.co/1GYKz6x/x-mark-256.png\" onclick=\"closeMethodsList()\" id=\"closeListButton\"></input>";
+                    //while mysqli_fetch_array is not pointing to null, we echo the rots "Name" value so the user can see the available methods
+                     while($row = mysqli_fetch_array($result))
+                        {
+                            echo "<div id = \"listOfMethodsPdiv\">";
+                            echo  "<p id = \"listOfMethodsP\"> ".$row['Name']." </p>";
+                            echo"</div>";
+                        }
+                 echo"</div>";
+                
+  
+            echo "</div>";
+            
+            
+             
+    
+        ?>
         
   
         <!--the div that contains two tab buttons which will allow easy access to other pages in the website -->
