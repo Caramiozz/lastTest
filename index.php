@@ -6,12 +6,6 @@
 
 
 
-
-
-
-
-
-
 <?php 
     
     // We start a session so we can add functionality to the websites login system.
@@ -59,7 +53,7 @@
     </head>
 
     <!--A wrapper div to keep the whole website including the body, we will give this a fixed size to circumvent resize issues -->
-    <div id="wrapper">
+    <!--<div id="wrapper">-->
         
         
         
@@ -806,6 +800,6 @@
 
 </body>
 
-</div>
+<!--</div>-->
     
 </html>
