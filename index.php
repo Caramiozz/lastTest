@@ -53,7 +53,7 @@
     </head>
 
     <!--A wrapper div to keep the whole website including the body, we will give this a fixed size to circumvent resize issues -->
-    <!--<div id="wrapper">-->
+   <div id="wrapper">
         
         
         
@@ -69,41 +69,9 @@
     <!--The main div of our index page, this will contain the functionality -->
     <div id="mainDiv">
        
-        <!-- PHP code taht will store the list of methods available in the database on a dropdown div-->
-         <?php
-            
-            $conn = mysqli_connect("localhost","root","","group5");
-            //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
-                        
-            // query the methods table for every entry                
-            $sql="SELECT * FROM methods";                       
-            $result = mysqli_query($conn , $sql);            
-            
-            // echo relevant fields for the methods list
-            echo "<div id=\"listOfMethodsDiv\">";
-            
-              echo"<button name=\"showListButtonPost\" id=\"showListButton\" onclick =\"showMethodsList()\"> List of Methods </button>";
-                
-              echo"<div id=\"listContainerDiv\" style=\"display: none\">"; 
-              echo"<input type=\"image\" src=\"https://i.ibb.co/1GYKz6x/x-mark-256.png\" onclick=\"closeMethodsList()\" id=\"closeListButton\"></input>";
-                    //while mysqli_fetch_array is not pointing to null, we echo the rots "Name" value so the user can see the available methods
-                     while($row = mysqli_fetch_array($result))
-                        {
-                            echo "<div id = \"listOfMethodsPdiv\">";
-                            echo  "<p id = \"listOfMethodsP\"> ".$row['Name']." </p>";
-                            echo"</div>";
-                        }
-                 echo"</div>";
-                
+       
+        
   
-            echo "</div>";
-            
-            
-             
-    
-        ?>
-        
-        
         <!--the div that contains two tab buttons which will allow easy access to other pages in the website -->
          <div id="siteTabsDiv">
         
@@ -800,6 +768,6 @@
 
 </body>
 
-<!--</div>-->
+</div>
     
 </html>
