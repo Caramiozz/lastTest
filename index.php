@@ -169,7 +169,7 @@
                 
                 
                 //connect to phpmyadmin
-                $conn = mysqli_connect("localhost","root","","group5");
+                $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
                 
                 //query the users table for the entry that the current user entered in the login and password input sections
                 $sqlLogin="SELECT * FROM Users WHERE Username = '$attemptName' ";      
@@ -370,7 +370,7 @@
                  // if someone is logged in
                  if(isset($_SESSION["SessionUsername"])){
                         //query the database by accessing the userfavourites table 
-                        $conn = mysqli_connect("localhost","root","","group5");
+                        $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
                         //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
                         
                         $startcurrentusername = $_SESSION["SessionUsername"];
@@ -504,7 +504,7 @@
                             
                              $currentMethodName = $_POST['searchInput'];
                             
-                             $conn = mysqli_connect("localhost","root","","group5");
+                             $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
                             //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
                              $sqlselect="SELECT * FROM userfavourites WHERE Username = '$currentusername' ";           
                              
@@ -647,7 +647,7 @@
             $name = $_POST['searchInput'];
             
                 
-            $conn = mysqli_connect("localhost","root","","group5");
+            $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
             //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
             
             $sql="SELECT * FROM Methods WHERE Name LIKE '%$name%' ";
@@ -728,7 +728,7 @@
                     $name = $_POST['searchInput'];
                     
 
-                    $conn = mysqli_connect("localhost","root","","group5");
+                    $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
 
 
                     $sql="SELECT * FROM methodimages WHERE ImageMethod LIKE '%$name%' ";
