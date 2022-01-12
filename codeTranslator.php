@@ -29,6 +29,7 @@
                 
             </div>
             
+            
             <!-- Tutorial div that contains the view tutorial button that contains translator tutorial-->
             
             <div id="tutorialDiv">
