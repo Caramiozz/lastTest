@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="codeTranslatorCSS.css">
         <script type="text/javascript" src="javascriptfile.js"></script>
         
+        <title>Code Translator</title>
+        
     </head>
     
     <!-- wrapper to hold the whole body -->
